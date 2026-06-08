@@ -1,82 +1,16 @@
-# AD312-Syncing-State-with-LocalStorage-using-a-Custom-Hook
-Assignment: Syncing State with LocalStorage using a Custom Hook
+# React + Vite
 
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-William Anderson
+Currently, two official plugins are available:
 
-AD312
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-useLocalStorage Custom Hook – React Project
+## React Compiler
 
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
+## Expanding the ESLint configuration
 
-This project demonstrates a reusable React custom hook called **useLocalStorage**.  
-It works like `useState`, but automatically saves and retrieves data from the browser's `localStorage`, so values persist even after page refresh.
-
----
-
-
-- Custom React Hook (useLocalStorage)
-- Persistent state using localStorage
-- Automatically saves updates to browser storage
-- Loads saved values on page refresh
-- Built using React Hooks: useState + useEffect
-
----
-
-Project Structure
-
-
-src/
-├── hooks/
-│ └── useLocalStorage.js
-├── App.jsx
-├── main.jsx
-
-
----
-
-How It Works
-
-- On first render, the hook checks localStorage for saved data.
-- If data exists, it loads it.
-- If not, it uses the default initial value.
-- Whenever the state changes, it automatically updates localStorage.
-
----
-
-How to Run the Project
-
-1. Install dependencies
-```bash
-npm install
-2. Start the development server
-npm run dev
-3. Open in browser
-http://localhost:5173
-
-
-Test Cases:
-Normal Cases:
-Default value loads when no data exists in localStorage
-Value updates when user interacts with UI
-Value persists after page refresh
-
-
-Edge Cases:
-Empty localStorage (localStorage.clear())
-App falls back to default value
-Different storage keys
-Each key stores independent values
-Complex objects stored in localStorage
-Objects are saved and restored using JSON
-
-Technologies Used:
-React
-JavaScript (ES6+)
-Vite
-Browser localStorage API
-
-Conclusion
-
-This project shows how to create reusable custom React hooks and persist state using browser storage. It improves user experience by saving preferences like theme settings across sessions.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
